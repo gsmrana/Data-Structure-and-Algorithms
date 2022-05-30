@@ -102,6 +102,55 @@ void sorting_MergeSortAsc(int* buf, int left, int right)
 	sorting_MergeArrayAsc(buf, left, mid, right);
 }
 
+// create Max Heap from parentIndex 
+// to all decendent child nodes recursively
+void sorting_Heapify(int* buf, int parentIndex, int length)
+{
+	int left = (parentIndex * 2) + 1;
+	int right = (parentIndex * 2) + 2;
+	int swapChild = parentIndex;
+
+	if (left < length && buf[left] > buf[swapChild])
+		swapChild = left;
+
+	if (right < length && buf[right] > buf[swapChild])
+		swapChild = right;
+
+	if (swapChild != parentIndex)
+	{
+		// swap parent with largest child
+		swap(buf[parentIndex], buf[swapChild]);
+
+		// heapify again from the swapped node
+		sorting_Heapify(buf, swapChild, length);
+	}
+}
+
+void sorting_HeapSortAsc(int* buf, int length)
+{
+	// create Max Heap
+	// starting from bottom internal node
+	int lastParent = (length / 2) - 1;
+	while (lastParent >= 0)
+	{
+		sorting_Heapify(buf, lastParent, length);
+		lastParent--;
+	}
+
+	int lastChild = length - 1;
+	while (lastChild > 0)
+	{
+		// swap the max value (root node)
+		// with the last unsorted position
+		swap(buf[0], buf[lastChild]);
+
+		// create max heap again from root 
+		// to remaining unsorted items 
+		sorting_Heapify(buf, 0, lastChild);
+		lastChild--;
+	}
+}
+
 void SortingAlgosUsageExample()
 {
 	printf("\n\n09. SortingAlgosUsageExample: ");
@@ -122,5 +171,9 @@ void SortingAlgosUsageExample()
 
 	sorting_MergeSortAsc(numbers, 0, length - 1);
 	printf("\nMergeSortAsc result : ");
+	display_array(numbers, length);
+
+	sorting_HeapSortAsc(numbers, length);
+	printf("\nHeapSortAsc result  : ");
 	display_array(numbers, length);
 }

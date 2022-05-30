@@ -13,6 +13,7 @@ int main()
 	PrefixPostfixUsageExample();
 	SearchingAlgosUsageExample();
 	SortingAlgosUsageExample();
+	PatternMatchingAlgosUsageExample();
 
 	printf("\n");
 	return 0;

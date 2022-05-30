@@ -148,6 +148,7 @@
     <ClCompile Include="07. PrefixPostfixExpression.cpp" />
     <ClCompile Include="08. SearchingAlgos.cpp" />
     <ClCompile Include="09. SortingAlgos.cpp" />
+    <ClCompile Include="10. PatternMatchingAlgos.cpp" />
     <ClCompile Include="CommonLibs.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

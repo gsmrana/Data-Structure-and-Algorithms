@@ -48,6 +48,9 @@
     <ClCompile Include="CommonLibs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="10. PatternMatchingAlgos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Typedefs.h">

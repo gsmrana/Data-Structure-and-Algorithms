@@ -14,6 +14,7 @@ void AvlTreeUsageExample();
 void PrefixPostfixUsageExample();
 void SearchingAlgosUsageExample();
 void SortingAlgosUsageExample();
+void PatternMatchingAlgosUsageExample();
 
 /* Tree module API */
 Node* CreateNode(int item);
