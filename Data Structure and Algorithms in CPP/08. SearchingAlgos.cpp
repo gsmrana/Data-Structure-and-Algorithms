@@ -1,4 +1,5 @@
 #include <iostream>
+#include "CommonLibs.h"
 using namespace std;
 
 int linear_search(int arr[], int length, int val)
@@ -34,14 +35,6 @@ int binary_search_algo(int arr[], int left, int right, int val)
 	}
 
 	return -1;
-}
-
-void display_array(int arr[], int length)
-{
-	for (int i = 0; i < length; i++)
-	{
-		printf("%d ", arr[i]);
-	}
 }
 
 void SearchingAlgosUsageExample()

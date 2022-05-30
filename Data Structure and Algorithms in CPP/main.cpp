@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Typedefs.h"
+#include "CommonLibs.h"
 using namespace std;
 
 int main()
@@ -14,5 +14,6 @@ int main()
 	SearchingAlgosUsageExample();
 	SortingAlgosUsageExample();
 
+	printf("\n");
 	return 0;
 }
